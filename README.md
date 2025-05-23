@@ -18,7 +18,7 @@ A clean and simple task manager with local storage persistence. Organize your ta
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/antony-jacob817/ToDo-List.git
+git clone https://github.com/antony-jacob817/To-Do-List.git
 cd ToDo-List
 open index.html   # or double-click to launch in your browser
 ```

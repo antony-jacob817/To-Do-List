@@ -1,33 +1,48 @@
-# 📝 To-Do List
+# 📝 To-Do List: 🧭 TaskTrail
 
-A simple **To-Do List** application built using **HTML, CSS, and JavaScript**.  
+A clean and simple task manager with local storage persistence. Organize your tasks, your way.
+
+🌐 **Live Demo:** [task-trail-silk.vercel.app](https://task-trail-silk.vercel.app/)
+
+---
 
 ## 📌 Features
 
-- Add new tasks  
-- Mark tasks as completed  
-- Delete tasks  
-- Responsive design  
+- ✅ Add, complete, and delete tasks  
+- ⏰ Set due dates and times  
+- 🔍 Filter tasks: All | Active | Completed  
+- 💾 Auto-saves in your browser (localStorage)
 
-## 📂 Project Files
+---
 
-- `main.html` – Structure of the To-Do List  
-- `styles.css` – Styling for the UI  
-- `script.js` – JavaScript for interactivity  
+## 🚀 Quick Start
 
-## 🚀 How to Use
+```bash
+git clone https://github.com/antony-jacob817/ToDo-List.git
+cd ToDo-List
+open index.html   # or double-click to launch in your browser
+```
 
-1. Open `main.html` in your browser  
-2. Enter a task in the input field and click **Add**  
-3. Click on a task to **mark it as complete**  
-4. Click the ❌ button to **delete** a task  
+---
 
-## 🛠 Technologies Used
+## 🛠 Tech Stack
 
-- HTML  
-- CSS  
-- JavaScript  
+<div>
 
-## 📜 License
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)<br>
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)<br>
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<br>
 
-This project is open-source and free to use.
+</div>
+
+---
+
+## 📸 Preview
+
+![Screenshot 2025-05-23 160523](https://github.com/user-attachments/assets/178a4a5c-7d71-48c6-bd59-d6f93f7f8858)
+
+---
+
+## 📄 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

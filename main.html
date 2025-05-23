@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="./script.js" defer></script>
 </head>
@@ -15,16 +15,36 @@
     <div class="todo-container">
         <div class="header">
             <h1><i class="fa-solid fa-list-check"></i> To-Do List</h1>
-            <p>Stay organized with your tasks</p>
+            <p>Stay organized and productive</p>
         </div>
 
         <div class="input-section">
             <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <div class="datetime-inputs">
+                <input type="date" id="dueDate">
+                <input type="time" id="dueTime">
+            </div>
             <button onclick="addTask()">
-                <i class="fa-solid fa-plus"></i></button>
+                <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+        </div>
+
+        <div class="task-filters">
+            <button id="showAll">All</button>
+            <button id="showActive">Active</button>
+            <button id="showCompleted">Completed</button>
         </div>
 
         <ul id="taskList" class="task-list"></ul>
+
+        <div class="task-stats">
+            <span id="totalTasks">0 tasks</span>
+            <span id="completedTasks">0 completed</span>
+        </div>
+
+        <div class="footer">
+            <p>&copy; <span id="currentYear"></span> To-Do List App. All rights reserved.</p>
+        </div>
     </div>
 </body>
 

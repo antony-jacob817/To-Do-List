@@ -12,32 +12,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .todo-container {
     background: #fff;
-    width: 400px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .header h1 {
     color: #4CAF50;
     font-size: 28px;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .header h1 i {
-    margin-right: 10px;
+    margin-right: 12px;
     color: #8e44ad;
 }
 
@@ -48,15 +52,35 @@ body {
 
 .input-section {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-.input-section input {
+.input-section input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-section input[type="text"]:focus {
+    border-color: #8e44ad;
+}
+
+.datetime-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.datetime-inputs input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 14px;
     outline: none;
 }
@@ -65,139 +89,177 @@ body {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 6px;
-    padding: 10px 15px;
+    border-radius: 8px;
+    padding: 12px;
     cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 8px;
 }
 
 .input-section button:hover {
     background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.task-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-filters button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.task-filters button:hover {
+    background-color: #e0e0e0;
+}
+
+.task-filters button.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .task-list {
     list-style: none;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .task-list li {
     background: #f9f9f9;
-    margin: 10px 0;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.task-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.task-content {
     display: flex;
     justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
     align-items: center;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.task-text {
-    font-size: 16px;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: #888;
-}
-
-/* Buttons */
-.done-btn, .delete-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 5px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-size: 12px;
-}
-
-.done-btn:hover {
-    background-color: #388E3C;
-}
-
-.delete-btn {
-    background-color: #e74c3c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-}
-
-.delete-btn:hover {
-    background-color: #c0392b;
-}
-
-.delete-btn i {
-    pointer-events: none;
-}
-
-h2 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-input[type="text"] {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 34px;
-    margin-right: 15px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    margin-bottom: 8px;
-    padding: 8px 10px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .task-text {
-    flex-grow: 1;
     font-size: 16px;
-    text-align: left;
-    color: #333;
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
 }
 
 .completed {
     text-decoration: line-through;
     color: #888;
+}
+
+.task-due {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-due i {
+    color: #8e44ad;
+}
+
+.task-due.overdue {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
 }
 
 .icon-btn {
     background: transparent;
     border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.done-btn {
     color: #4CAF50;
-    font-size: 16px;
-    margin-left: 8px;
-    transition: color 0.3s ease;
+    border: 1px solid #4CAF50;
+}
+
+.done-btn:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .delete-btn {
     color: #e74c3c;
+    border: 1px solid #e74c3c;
 }
 
+.delete-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.task-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    color: #888;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 0;
+    color: #888;
+}
+
+.empty-state i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.empty-state p {
+    font-size: 16px;
+}

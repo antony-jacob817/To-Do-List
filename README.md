@@ -30,4 +30,4 @@ A simple **To-Do List** application built using **HTML, CSS, and JavaScript**.
 
 ## 📜 License
 
-This project is open-source and free to use.  
+This project is open-source and free to use.

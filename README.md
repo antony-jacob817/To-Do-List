@@ -1,4 +1,4 @@
-# 📝 To-Do List: 🧭 TaskTrail
+# 📝 To-Do List: 🧭 Task Trail
 
 A clean and simple task manager with local storage persistence. Organize your tasks, your way.
 

@@ -2,7 +2,7 @@
 
 A clean and simple task manager with local storage persistence. Organize your tasks, your way.
 
-🌐 **Live Demo:** [task-trail-silk.vercel.app](https://task-trail-silk.vercel.app/)
+🔗 [Live Demo](https://task-trail-silk.vercel.app/)
 
 ---
 

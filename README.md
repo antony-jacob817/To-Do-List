@@ -19,8 +19,8 @@ A clean and simple task manager with local storage persistence. Organize your ta
 
 ```bash
 git clone https://github.com/antony-jacob817/To-Do-List.git
-cd ToDo-List
-open index.html   # or double-click to launch in your browser
+cd To-Do-List
+open main.html   # or double-click to launch in your browser
 ```
 
 ---

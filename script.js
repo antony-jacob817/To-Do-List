@@ -16,11 +16,13 @@ currentYear.textContent = new Date().getFullYear();
 // Initialize tasks array from local storage
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Filter state
+// Filter state - set to 'all' by default
 let filter = "all";
 
 // Initialize the app
 function init() {
+    // Set active filter button style
+    updateActiveFilterButton();
     renderTasks();
     updateStats();
     
@@ -82,6 +84,27 @@ function deleteTask(id) {
 // Save tasks to local storage
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Update active filter button styles
+function updateActiveFilterButton() {
+    // Remove active class from all buttons
+    showAll.classList.remove("active");
+    showActive.classList.remove("active");
+    showCompleted.classList.remove("active");
+    
+    // Add active class to the current filter button
+    switch(filter) {
+        case "all":
+            showAll.classList.add("active");
+            break;
+        case "active":
+            showActive.classList.add("active");
+            break;
+        case "completed":
+            showCompleted.classList.add("active");
+            break;
+    }
 }
 
 // Render tasks based on current filter
@@ -194,25 +217,19 @@ function updateStats() {
 // Event listeners for filter buttons
 showAll.addEventListener("click", () => {
     filter = "all";
-    showAll.classList.add("active");
-    showActive.classList.remove("active");
-    showCompleted.classList.remove("active");
+    updateActiveFilterButton();
     renderTasks();
 });
 
 showActive.addEventListener("click", () => {
     filter = "active";
-    showAll.classList.remove("active");
-    showActive.classList.add("active");
-    showCompleted.classList.remove("active");
+    updateActiveFilterButton();
     renderTasks();
 });
 
 showCompleted.addEventListener("click", () => {
     filter = "completed";
-    showAll.classList.remove("active");
-    showActive.classList.remove("active");
-    showCompleted.classList.add("active");
+    updateActiveFilterButton();
     renderTasks();
 });
 
